@@ -1303,16 +1303,22 @@ section {
 
 .links {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 100%;
 }
 
 .links a {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 0;
   padding: 5px 10px;
   background-color: #ddd;
   text-decoration: none;
   color: #333;
   transition: background-color 0.2s ease-in-out;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .links a:hover {
@@ -1367,7 +1373,13 @@ section {
 
   .details {
     padding-left: 0;
+    padding-top: 12px;
     width: 100%;
+  }
+
+  /* Project pages: add a bit more air between headings/text and large figures */
+  .inner-page .container a > img.img-fluid {
+    margin-top: 10px;
   }
 }
 
