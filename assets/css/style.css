@@ -643,6 +643,55 @@ section {
   flex: 0 0 auto;
 }
 
+/* Experience: bullet points expand on hover (always shown on touch screens) */
+.resume-hover .resume-item {
+  padding-top: 8px;
+  padding-right: 12px;
+  border-radius: 0 6px 6px 0;
+  transition: background-color 0.25s ease;
+  outline: none;
+}
+
+.resume-hover .resume-item .edu-logo {
+  transition: transform 0.25s ease;
+}
+
+.resume-hover .resume-details {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.3s ease, opacity 0.3s ease;
+}
+
+.resume-hover .resume-details > ul {
+  overflow: hidden;
+  min-height: 0;
+  margin-bottom: 0;
+}
+
+.resume-hover .resume-item:hover,
+.resume-hover .resume-item:focus-within {
+  background-color: rgba(20, 157, 221, 0.06);
+}
+
+.resume-hover .resume-item:hover .edu-logo,
+.resume-hover .resume-item:focus-within .edu-logo {
+  transform: scale(1.15);
+}
+
+.resume-hover .resume-item:hover .resume-details,
+.resume-hover .resume-item:focus-within .resume-details {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .resume-hover .resume-details {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+}
+
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
