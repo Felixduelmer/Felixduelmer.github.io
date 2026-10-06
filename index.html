@@ -24,7 +24,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style.css?v=20261006e" rel="stylesheet">
   
 
   <!-- =======================================================
@@ -61,6 +61,7 @@
         <ul>
           <!-- <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li> -->
           <li><a href="#about" class="nav-link scrollto"><i class="bi bi-person-vcard"></i> <span>About</span></a></li>
+          <li><a href="#news" class="nav-link scrollto"><i class="bi bi-newspaper"></i> <span>News</span></a></li>
           <li><a href="#publications" class="nav-link scrollto"><i class="bi bi-file-earmark"></i> <span>Publications</span></a></li>
           <li><a href="#workexperience" class="nav-link scrollto"><i class="bi bi-building"></i> <span>Experience</span></a></li>
           <li><a href="#education" class="nav-link scrollto"><i class="bi bi-mortarboard"></i> <span>Education</span></a></li>
@@ -127,6 +128,47 @@
       </div>
     </section><!-- End About Section -->
 
+    <!-- ======= News Section ======= -->
+    <section id="news" class="news section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>News</h2>
+        </div>
+        <div class="news-list">
+          <div class="news-item">
+            <div class="news-date">Oct 2026</div>
+            <div class="news-content">
+              Our paper <a href="publications/ultradiff.html"><em>UltraDiff: Differentiable Ray Tracing in Ultrasound for Shape Optimization</em></a> was accepted at <strong>SIGGRAPH Asia 2026 Technical Communications</strong>. See you in Kuala Lumpur in December!
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">Oct 2026</div>
+            <div class="news-content">
+              The <a href="https://open-h.github.io/OpenH-RF/">OpenH-RF</a> dataset is out: the largest openly licensed collection of ultrasound channel data, with 19,336 measurements from 38 institutions. I am proud to be part of the core team.
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">Sep 2026</div>
+            <div class="news-content">
+              <a href="publications/ultrabend.html"><em>UltraBend: Refraction-Aware Propagation Modeling for Speed of Sound Imaging in Ultrasound</em></a> received the <strong>Best Presentation Award</strong> at <strong>ASMUS 2026</strong> (MICCAI 2026, Strasbourg).
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">Jul 2026</div>
+            <div class="news-content">
+              Presented <a href="publications/ultragray.html"><em>UltraG-Ray: Physics-Based Gaussian Ray Casting for Novel Ultrasound View Synthesis</em></a> at <strong>MIDL 2026</strong>.
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">Mar 2026</div>
+            <div class="news-content">
+              Started a research visit at <a href="https://med.stanford.edu/ultrasound.html">Stanford University</a> in the Ultrasound Imaging and Instrumentation Lab of Prof. Jeremy Dahl, working on differentiable speed-of-sound estimation.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End News Section -->
+
     <!-- ======= Facts Section ======= -->
 
     <section id="publications" class="facts">
@@ -135,16 +177,70 @@
           <h2>Publications</h2>
         </div>
 
-        <div class="publication-box">
+        <p class="pub-legend"><span class="pub-legend-swatch" aria-hidden="true"></span>Selected works are highlighted.</p>
+
+        <div class="publication-box has-award">
+          <div class="image">
+            <img src="assets/data/openh_rf/OpenH-RF_examples.jpg" alt="Mosaic of ultrasound images from the OpenH-RF dataset" loading="lazy" decoding="async">
+          </div>
+          <div class="details">
+            <span class="award-badge badge-role" title="Core team member of the OpenH-RF initiative"><i class="bi bi-people-fill" aria-hidden="true"></i>Core Team</span>
+            <h2 class="title">OpenH-RF: Open Ultrasound Channel Data</h2>
+            <p class="conference">Open data initiative led by Stanford, TU/e &amp; NVIDIA · 38 institutions · arXiv coming soon</p>
+            <p class="abstract">The largest openly licensed dataset of pre-beamformed medical ultrasound measurements: 19,336 real and synthetic channel captures for training raw-to-insight foundation models (CC BY 4.0).</p>
+            <p class="authors">Stevens, T. S. W.*§, Penninga, S. W.*§, van Nierop, W. L.*§, Nolan, O.*§, <strong>Dülmer, F.§</strong>, Frey, B. N.§, … Dahl, J.†§, van Sloun, R. J. G.†§, &amp; Simson, W.†§<br><small class="text-muted">* equal first authors · † equal senior authors · § core team · OpenH-RF Consortium, 181 authors</small></p>
+            <div class="links">
+              <a href="https://open-h.github.io/OpenH-RF/" class="project-button">Website</a>
+              <a href="https://huggingface.co/datasets/nvidia/OpenH-RF" class="pdf-button">Dataset</a>
+              <a href="https://github.com/open-h/OpenH-RF" class="pdf-button">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="publication-box pub-highlight">
+          <div class="image">
+            <img src="assets/data/ultra_diff/representative_figure_ultradiff.jpg" alt="UltraDiff teaser image" loading="lazy" decoding="async">
+          </div>
+          <div class="details">
+            <h2 class="title">UltraDiff: Differentiable Ray Tracing in Ultrasound for Shape Optimization</h2>
+            <p class="conference">SIGGRAPH Asia 2026 Technical Communications (Kuala Lumpur, Malaysia)</p>
+            <p class="authors"><strong>Dülmer, F.</strong>, Wysocki, M., Navab, N., &amp; Azampour, M. F.</p>
+            <div class="links">
+              <a href="publications/ultradiff.html" class="project-button">Project Page</a>
+              <a href="https://github.com/Felixduelmer/ultradiff" class="pdf-button">Code</a>
+              <a href="https://youtu.be/hkNkhbVH_PI" class="pdf-button">Video</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="publication-box has-award pub-highlight">
+          <div class="image">
+            <img src="assets/data/ultra_bend/method_ultrabend.png" alt="UltraBend teaser image" loading="lazy" decoding="async">
+          </div>
+          <div class="details">
+            <span class="award-badge" title="Best Presentation Award, ASMUS 2026"><i class="bi bi-award-fill" aria-hidden="true"></i>Best Presentation Award</span>
+            <h2 class="title">UltraBend: Refraction-Aware Propagation Modeling for Speed of Sound Imaging in Ultrasound</h2>
+            <p class="conference">ASMUS 2026 (MICCAI Workshop)</p>
+            <p class="authors"><strong>Dülmer, F.</strong>, Beuret, S., Frey, B. N., Azampour, M. F., Navab, N., &amp; Dahl, J. J.</p>
+            <div class="links">
+              <a href="publications/ultrabend.html" class="project-button">Project Page</a>
+              <a href="https://openreview.net/forum?id=CIJzoHelIa" class="pdf-button">Paper</a>
+              <a href="https://youtu.be/kzE4NKUmzSc" class="pdf-button">Video</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="publication-box pub-highlight">
           <div class="image">
             <img src="assets/data/ultra_gray/echo_trans_ultra_gray_teaser.png" alt="UltraG-Ray teaser image" loading="lazy" decoding="async">
           </div>
           <div class="details">
             <h2 class="title">UltraG-Ray: Physics-Based Gaussian Ray Casting for Novel Ultrasound View Synthesis</h2>
-            <p class="conference">MIDL 2026 (Accepted)</p>
+            <p class="conference">MIDL 2026 · arXiv:2603.29022</p>
             <p class="authors"><strong>Dülmer, F.</strong>, Klaushofer, J., Wysocki, M., Navab, N., &amp; Azampour, M. F.</p>
             <div class="links">
               <a href="publications/ultragray.html" class="project-button">Project Page</a>
+              <a href="https://arxiv.org/abs/2603.29022" class="pdf-button">arXiv</a>
               <a href="https://openreview.net/pdf?id=QIUjZpcGYz" class="pdf-button">Paper</a>
               <a href="https://github.com/jakobkla/UltraG-Ray" class="pdf-button">Code</a>
             </div>
@@ -168,7 +264,7 @@
           </div>
         </div>
 
-        <div class="publication-box">
+        <div class="publication-box pub-highlight">
           <div class="image">
             <img src="assets/data/ultra_ray/UltraRay_teaser.png" alt="UltraRay teaser image" loading="lazy" decoding="async">
           </div>
@@ -188,6 +284,22 @@
 
         <div class="publication-box">
           <div class="image">
+            <img src="assets/data/ultron/UltrON_teaser.png" alt="UltrON teaser image" loading="lazy" decoding="async">
+          </div>
+          <div class="details">
+            <h2 class="title">UltrON: Ultrasound Occupancy Networks</h2>
+            <p class="conference">MICCAI 2025 · arXiv:2509.08991</p>
+            <p class="authors">Wysocki, M., <strong>Dülmer, F.</strong>, Bal, A., Navab, N., &amp; Azampour, M. F.</p>
+            <div class="links">
+              <a href="https://arxiv.org/abs/2509.08991" class="pdf-button">arXiv</a>
+              <a href="https://link.springer.com/chapter/10.1007/978-3-032-04984-1_58" class="pdf-button">Publisher</a>
+              <a href="https://github.com/magdalena-wysocki/ultron" class="pdf-button">Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="publication-box">
+          <div class="image">
             <img src="assets/data/images/ann_rev.gif" alt="Annual Review paper teaser image" loading="lazy" decoding="async">
           </div>
           <div class="details">
@@ -200,11 +312,12 @@
           </div>
         </div>
 
-        <div class="publication-box">
+        <div class="publication-box has-award">
           <div class="image">
             <img src="assets/data/phocus/Teaser_Image.png" alt="PHOCUS teaser image" loading="lazy" decoding="async">
           </div>
           <div class="details">
+            <span class="award-badge award-silver" title="Best Paper Runner-Up, ASMUS 2024"><i class="bi bi-award-fill" aria-hidden="true"></i>Best Paper Runner-Up</span>
             <h2 class="title">PHOCUS: Physics-Based Deconvolution for Ultrasound Resolution Enhancement</h2>
             <p class="conference">ASMUS 2024 (LNCS) · arXiv:2408.03657</p>
             <p class="authors"><strong>Dülmer, F.</strong>, Simson, W., Azampour, M. F., Wysocki, M., Karlas, A., &amp; Navab, N.</p>

@@ -1295,6 +1295,82 @@ section {
 .authors {
   margin-bottom: 10px;
 }
+
+/* Award badge: navy corner tab on publication cards, inline pill on project pages */
+.award-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background-color: #173b6c;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(23, 59, 108, 0.25);
+}
+
+.award-badge i {
+  color: #ffcc00;
+  font-size: 15px;
+}
+
+.award-badge.award-silver i {
+  color: #c9d1d9;
+}
+
+/* Highlighted (selected) publications */
+.publication-box.pub-highlight {
+  background-color: #fff4cc;
+  border-left: 4px solid #ffcc00;
+}
+
+.pub-legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #555;
+}
+
+.pub-legend-swatch {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background-color: #fff4cc;
+  border-left: 4px solid #ffcc00;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+}
+
+/* Role badge (e.g. core team): accent blue to distinguish it from awards */
+.award-badge.badge-role {
+  background-color: #149ddd;
+  box-shadow: 0 2px 6px rgba(20, 157, 221, 0.3);
+}
+
+.award-badge.badge-role i {
+  color: #fff;
+}
+
+.publication-box {
+  position: relative;
+}
+
+.publication-box .award-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px 14px;
+  border-radius: 0 0 0 8px;
+}
+
+.publication-box.has-award .title {
+  padding-right: 200px;
+}
 .conf-name {
   font-size: 20px;
   color: grey;
@@ -1375,6 +1451,16 @@ section {
     padding-left: 0;
     padding-top: 12px;
     width: 100%;
+  }
+
+  .publication-box .award-badge {
+    position: static;
+    margin-bottom: 8px;
+    border-radius: 4px;
+  }
+
+  .publication-box.has-award .title {
+    padding-right: 0;
   }
 
   /* Project pages: add a bit more air between headings/text and large figures */
@@ -1720,4 +1806,87 @@ samp {
 }
 .highlighted-publication-box .pdf-button:hover {
   background-color: #fbc02d; /* Slightly darker yellow on hover */
+}
+
+/*--------------------------------------------------------------
+# News
+--------------------------------------------------------------*/
+.news {
+  padding: 40px 0;
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Show at most 5 news items; newest go first in the HTML */
+.news-list .news-item:nth-child(n+6) {
+  display: none;
+}
+
+.news-item {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-left: 4px solid #149ddd;
+  border-radius: 4px;
+  padding: 8px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.news-date {
+  flex: 0 0 110px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #149ddd;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-right: 16px;
+  border-right: 1px solid #e6e9ef;
+  margin-right: 18px;
+}
+
+.news-content {
+  flex: 1;
+  color: #2c4566;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.news-content a {
+  color: #1f5297;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.news-content a:hover {
+  color: #149ddd;
+  text-decoration: underline;
+}
+
+@media (max-width: 575px) {
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-date {
+    flex: none;
+    border-right: none;
+    border-bottom: 1px solid #e6e9ef;
+    padding-right: 0;
+    padding-bottom: 8px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }

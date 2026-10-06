@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>UltraBend</title>
+
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css/style.css?v=20261006e" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header / Sidebar ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+      <div class="profile">
+        <img src="../assets/data/images/felix.jpg" onerror="this.onerror=null;this.src='../assets/data/images/avatar.jpg';" alt="Felix Dülmer" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="../index.html">Felix Dülmer</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="mailto:felix.duelmer@tum.de" class="email"><i class="bi bi-envelope"></i></a>
+          <a href="https://github.com/Felixduelmer" class="github" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/felix-d%C3%BClmer-01667711a/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          <a href="https://scholar.google.com/citations?user=jbpQlOIAAAAJ&hl=de" class="scholar" aria-label="Google Scholar">
+            <svg style="margin-bottom:-10px;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 100 512 512" width="32px" height="32px" fill="#000000"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g><path fill="#ffffff" d="M213 111l-107 94h69c5 45 41 64 78 67-7 18-4 27 7 39-43 1-103 26-103 67 4 45 63 54 92 54 38 1 81-19 90-54 4-35-10-54-31-71-23-18-28-28-21-40 15-17 35-27 39-51 2-17-2-28-6-43l45-38-1 16c-3 2-5 6-5 9v103c2 13 22 11 23 0V160c0-3-2-7-5-8v-25l16-16zm58 141c-61 10-87-87-38-99 56-11 83 86 38 99zm-5 73c60 13 61 63 10 78-44 9-82-4-81-30 0-25 35-48 71-48z"></path></g></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="../index.html#about" class="nav-link scrollto"><i class="bi bi-person-vcard"></i> <span>About</span></a></li>
+          <li><a href="../index.html#news" class="nav-link scrollto"><i class="bi bi-newspaper"></i> <span>News</span></a></li>
+          <li><a href="../index.html#publications" class="nav-link scrollto"><i class="bi bi-file-earmark"></i> <span>Publications</span></a></li>
+          <li><a href="../index.html#workexperience" class="nav-link scrollto"><i class="bi bi-building"></i> <span>Experience</span></a></li>
+          <li><a href="../index.html#education" class="nav-link scrollto"><i class="bi bi-mortarboard"></i> <span>Education</span></a></li>
+          <li><a href="../index.html#contact" class="nav-link scrollto"><i class="bi bi-envelope-at"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+    <section class="inner-page">
+      <div class="container py-5">
+    <div class="mb-4">
+      <a href="../index.html#publications" class="text-decoration-none"><i class="bi bi-arrow-left"></i> Back to Publications</a>
+    </div>
+
+    <h1 class="mb-2">UltraBend: Refraction-Aware Propagation Modeling for Speed of Sound Imaging in Ultrasound</h1>
+    <p class="mb-1"><strong>Felix Dülmer</strong>, Samuel Beuret, Benjamin N. Frey, Mohammad Farid Azampour, Nassir Navab, Jeremy J. Dahl</p>
+    <p class="text-muted mb-2">ASMUS 2026 (MICCAI Workshop)</p>
+    <p class="mb-3"><span class="award-badge"><i class="bi bi-award-fill" aria-hidden="true"></i>Best Presentation Award · ASMUS 2026</span></p>
+
+    <div class="links mb-4">
+      <a class="project-button" href="https://openreview.net/forum?id=CIJzoHelIa">Paper (OpenReview)</a>
+      <a class="project-button" href="#video">Video</a>
+    </div>
+
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-7">
+        <h2 class="h4">Abstract</h2>
+        <p class="mb-0">
+          The local speed of sound (SoS) of human soft tissues is a promising quantitative biomarker for the diagnosis of diseases such as breast cancer or fatty liver disease. One approach to estimate local SoS from pulse-echo ultrasound signals is the autofocusing method, which optimizes for the propagation model that best aligns beamformed signals recorded from different transmit–receive apertures. However, most pulse-echo autofocusing methods still rely on a straight-ray hypothesis, thus neglecting refraction effects occurring in heterogeneous media. To address this shortcoming, we introduce UltraBend, which replaces straight-line travel-time approximations with a refraction-aware bent-ray model for local SoS optimization. We compare our method with a state-of-the-art autofocusing method assuming straight-ray wave propagation and show that UltraBend reduces the mean absolute reconstruction SoS error relative to a straight-ray baseline on all evaluated phantoms, including a reduction from 8.51 to 3.70 m/s on an inclusion phantom. These results suggest that improved modeling of wave propagation can substantially improve pulse-echo SoS imaging.
+        </p>
+      </div>
+      <div class="col-lg-5">
+        <a href="../assets/data/ultra_bend/method_ultrabend.png" data-gallery="ultrabend-gallery" class="portfolio-lightbox">
+          <img src="../assets/data/ultra_bend/method_ultrabend.png" class="img-fluid rounded shadow-sm" alt="UltraBend: bent rays traced from the active element through the speed-of-sound field deposit arrival times onto nearby autofocus targets" decoding="async">
+        </a>
+      </div>
+    </div>
+
+    <hr class="my-4">
+
+    <h2 class="h4" id="video">Video</h2>
+    <p class="text-muted mb-2">Speed-of-sound optimization with refraction-aware ray tracing.</p>
+    <div class="ratio ratio-16x9 mb-4">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/kzE4NKUmzSc"
+        title="UltraBend video"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <hr class="my-4">
+
+    <h2 class="h4">Overview</h2>
+    <p>
+      Key figures from UltraBend are shown below.
+    </p>
+
+    <div class="mb-4">
+      <h3 class="h5">Refraction-aware travel times</h3>
+      <p class="mb-2">
+        For each active array element, rays are traced through the current speed-of-sound field (figure above). Nearby autofocus targets accumulate arrival-time estimates through a Gaussian kernel, where the along-ray offset corrects the travel time and the orthogonal offset sets the deposition weight. This captures first-order refraction without solving a separate two-point ray path for every element–target pair, and a fixed-replay adjoint provides gradients without storing the full ray-tracing history.
+      </p>
+    </div>
+
+    <div class="mb-4">
+      <h3 class="h5">Arrival-time accuracy</h3>
+      <p class="mb-2">
+        Compared to k-Wave simulations, bent rays reduce one-way arrival-time residuals where refraction is strong, particularly below the inclusion and across high-contrast checkerboard structures. Orange boxes mark the receiver-grid region.
+      </p>
+      <a href="../assets/data/ultra_bend/residuals_ultrabend.png" data-gallery="ultrabend-gallery" class="portfolio-lightbox">
+        <img src="../assets/data/ultra_bend/residuals_ultrabend.png" class="img-fluid rounded shadow-sm" alt="Arrival-time residual maps for StraightRay and UltraBend on four phantoms" loading="lazy" decoding="async">
+      </a>
+      <div class="table-responsive mt-3">
+        <table class="table table-sm table-bordered text-center mb-1">
+          <thead>
+            <tr><th class="text-start">Case</th><th>StraightRay</th><th>UltraBend</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="text-start">Layered</td><td><strong>4.18 &plusmn; 2.38</strong></td><td>5.34 &plusmn; 1.94</td></tr>
+            <tr><td class="text-start">Inclusion</td><td>2.80 &plusmn; 2.77</td><td><strong>2.52 &plusmn; 2.23</strong></td></tr>
+            <tr><td class="text-start">Checker 2</td><td>66.54 &plusmn; 135.86</td><td><strong>21.27 &plusmn; 67.35</strong></td></tr>
+            <tr><td class="text-start">Checker 4</td><td>76.14 &plusmn; 156.99</td><td><strong>45.66 &plusmn; 141.51</strong></td></tr>
+          </tbody>
+        </table>
+        <p class="small text-muted">One-way time-of-flight residuals relative to k-Wave (mean absolute residual &plusmn; std, ns). Best values in bold.</p>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <h3 class="h5">Speed-of-sound reconstruction</h3>
+      <p class="mb-2">
+        Against a straight-ray differentiable beamforming baseline, UltraBend lowers the mean absolute SoS error on all four phantoms, most clearly on the inclusion phantom (8.51 &rarr; 3.70 m/s), and better preserves high-contrast structure in the checkerboards. Remaining errors concentrate near sharp interfaces and caustics, where the first-arrival ray assumption is least valid.
+      </p>
+      <a href="../assets/data/ultra_bend/sos_results_ultrabend.png" data-gallery="ultrabend-gallery" class="portfolio-lightbox">
+        <img src="../assets/data/ultra_bend/sos_results_ultrabend.png" class="img-fluid rounded shadow-sm" alt="Speed-of-sound reconstructions: ground truth, StraightRay and UltraBend on four phantoms" loading="lazy" decoding="async">
+      </a>
+      <div class="table-responsive mt-3">
+        <table class="table table-sm table-bordered text-center mb-1">
+          <thead>
+            <tr><th class="text-start">Case</th><th>StraightRay</th><th>UltraBend</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="text-start">Layered</td><td>24.73 &plusmn; 24.89</td><td><strong>24.10 &plusmn; 24.51</strong></td></tr>
+            <tr><td class="text-start">Inclusion</td><td>8.51 &plusmn; 5.59</td><td><strong>3.70 &plusmn; 3.76</strong></td></tr>
+            <tr><td class="text-start">Checker 2</td><td>37.94 &plusmn; 28.15</td><td><strong>34.72 &plusmn; 38.33</strong></td></tr>
+            <tr><td class="text-start">Checker 4</td><td>55.83 &plusmn; 34.46</td><td><strong>49.25 &plusmn; 44.90</strong></td></tr>
+          </tbody>
+        </table>
+        <p class="small text-muted">Speed-of-sound reconstruction error (MAE &plusmn; std of the absolute error, m/s). Best MAE in bold.</p>
+      </div>
+    </div>
+
+    <hr class="my-4">
+
+    <h2 class="h4">Citation</h2>
+    <p class="mb-2">If you find this work useful, please cite:</p>
+    <pre class="bg-light p-3 rounded border"><code>@inproceedings{duelmer2026ultrabend,
+  title={UltraBend: Refraction-Aware Propagation Modeling for Speed of Sound Imaging in Ultrasound},
+  author={Duelmer, Felix and Beuret, Samuel and Frey, Benjamin N. and Azampour, Mohammad Farid and Navab, Nassir and Dahl, Jeremy J.},
+  booktitle={International Workshop on Advances in Simplifying Medical Ultrasound},
+  year={2026},
+  organization={Springer}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script defer src="../assets/vendor/aos/aos.js"></script>
+  <script defer src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script defer src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script defer src="../assets/vendor/typed.js/typed.min.js"></script>
+  <script defer src="../assets/js/main.js"></script>
+</body>
+</html>
